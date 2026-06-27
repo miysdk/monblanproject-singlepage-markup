@@ -1,116 +1,71 @@
-import AppBar from '@mui/material/AppBar'
-import Box from '@mui/material/Box'
-import Button from '@mui/material/Button'
-import Container from '@mui/material/Container'
-import Toolbar from '@mui/material/Toolbar'
-import Typography from '@mui/material/Typography'
-import Avatar from '@mui/material/Avatar'
-import './Header.scss'
-import logo from '../assets/logo.png'
-import { Chip } from '@mui/material'
-import { DatePicker } from '@mui/x-date-pickers/DatePicker'
+import AppBar from '@mui/material/AppBar';
+import Avatar from '@mui/material/Avatar';
+import Box from '@mui/material/Box';
+import Chip from '@mui/material/Chip';
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import logo from '../assets/logo.png';
+import './Header.scss';
 
 function Header() {
   return (
-    <AppBar 
-      position="sticky" 
-      color="inherit" 
+    <AppBar
+      position="sticky"
+      color="inherit"
       className="header"
-      sx={{
-        backgroundColor: 'rgba(255,255,255,0.67)',
-      }}
+      sx={{ backgroundColor: 'rgba(255,255,255,0.67)' }}
     >
-      <Container 
-        maxWidth={false} 
-        sx={{ 
-          display: 'flex', 
-          alignItems: 'center', 
-          justifyContent: 'center', 
-          padding: "16px 0", 
+      <Container
+        maxWidth={false}
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: '16px 0',
           maxWidth: '836px',
           width: '100%',
           gap: 10.75,
         }}
       >
         <Box className="header__logo__container">
-          <Avatar 
-            src={logo} 
-            className="header__logo big" 
-          />
+          <Avatar src={logo} className="header__logo big" />
         </Box>
-        <Box 
-          className="header__info" 
+
+        <Box
+          className="header__info"
           sx={{ display: 'flex', flexDirection: 'column', alignItems: 'start', justifyContent: 'center', gap: 2 }}
         >
-          <Box 
-            className="header__title" 
-            sx={{ display: 'flex', alignItems: 'center', gap: 2 }}
-          >
-            <Avatar 
-              src={logo} 
-              className="header__logo small" 
-            />
-            <Typography 
-              variant="h5"
-            >
-              monblanproject
-            </Typography>
-            <Chip 
-              label="start on 17.02.2016" 
-              variant="outlined" 
-              sx={{
-                color: "#3D8EDA",
-                borderColor: "#3D8EDA",
-                borderRadius: '2px'
-              }}
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+            <Avatar src={logo} className="header__logo small" />
+            <Typography variant="h5">monblanproject</Typography>
+            <Chip
+              label="start on 17.02.2016"
+              variant="outlined"
+              sx={{ color: '#3d8eda', borderColor: '#3d8eda', borderRadius: '2px' }}
             />
           </Box>
-          <Box 
-            className="header__title" 
-            sx={{ display: 'flex', alignItems: 'center', gap: 2 }}
-          >
-            <Typography>
-              <b>870</b> posts
-            </Typography>
-            <Typography>
-              <b>11,787</b> followers
-            </Typography>
-            <Typography>
-              <b>112</b> following
-            </Typography>
+
+          <Box className="header__stats" sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+            <Typography><b>870</b> posts</Typography>
+            <Typography><b>11,787</b> followers</Typography>
+            <Typography><b>112</b> following</Typography>
           </Box>
-          <Box
-            className="header__date__filters"
-          >
-            <DatePicker 
+
+          <Box className="header__date__filters">
+            <DatePicker
               label="From"
-              slotProps={{
-                textField: {
-                  size: 'small',
-                  sx: {
-                    bgcolor: '#fff',
-                    borderRadius: 1
-                  }
-                },
-              }}
+              slotProps={{ textField: { size: 'small', sx: { bgcolor: '#fff', borderRadius: 1 } } }}
             />
-            <DatePicker 
+            <DatePicker
               label="To"
-              slotProps={{
-                textField: {
-                  size: 'small',
-                  sx: {
-                    bgcolor: '#fff',
-                    borderRadius: 1
-                  }
-                },
-              }}
+              slotProps={{ textField: { size: 'small', sx: { bgcolor: '#fff', borderRadius: 1 } } }}
             />
           </Box>
         </Box>
       </Container>
     </AppBar>
-  )
+  );
 }
 
-export default Header
+export default Header;

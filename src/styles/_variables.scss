@@ -1,23 +1,26 @@
-$color-primary: #1a365d;
+$color-primary:       #1a365d;
 $color-primary-light: #2c5282;
-$color-secondary: #c9a227;
-$color-text: #1a202c;
-$color-text-muted: #4a5568;
-$color-bg: #fafafa;
-$color-surface: #ffffff;
-$color-border: rgba(0, 0, 0, 0.08);
+$color-secondary:     #c9a227;
+$color-accent:        #3d8eda;
+$color-text:          #1a202c;
+$color-text-muted:    #4a5568;
+$color-bg:            #fafafa;
+$color-surface:       #ffffff;
+$color-border:        rgba(0, 0, 0, 0.08);
 
 $font-sans: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
 
-$spacing-xs: 0.5rem;
-$spacing-sm: 1rem;
-$spacing-md: 1.5rem;
-$spacing-lg: 2.5rem;
-$spacing-xl: 4rem;
+$spacing-xs:  0.5rem;
+$spacing-sm:  1rem;
+$spacing-md:  1.5rem;
+$spacing-lg:  2.5rem;
+$spacing-xl:  4rem;
 $spacing-2xl: 6rem;
 
+$breakpoint-xs: 470px;
+$breakpoint-sm: 530px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 836px;
 
-$container-max: 1200px;
+$container-max:     1200px;
 $section-padding-y: $spacing-2xl;

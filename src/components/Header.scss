@@ -1,12 +1,12 @@
+@use '../styles/variables' as *;
+
 header.header {
-  -webkit-box-shadow: inset 0px 12px 24px 0px #0000001F, 0px 4px 24px 0px #0000001F; 
-  box-shadow: inset 0px 12px 24px 0px #0000001F, 0px 4px 24px 0px #0000001F;
-  backdrop-filter: none;
+  box-shadow: inset 0 12px 24px 0 #0000001f, 0 4px 24px 0 #0000001f;
 }
 
 .header__logo__container,
 .header__logo.big {
-  @media (max-width: 836px) {
+  @media (max-width: $breakpoint-lg) {
     display: none;
   }
 }
@@ -17,19 +17,19 @@ header.header {
   aspect-ratio: 1 / 1;
   border-radius: 0;
 
-  &.small {
-    @media (min-width: 837px) {
-      display: none;
-    }
-  }
-
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 
-  @media (max-width: 836px) {
+  &.small {
+    @media (min-width: ($breakpoint-lg + 1px)) {
+      display: none;
+    }
+  }
+
+  @media (max-width: $breakpoint-lg) {
     width: 40px !important;
     height: 40px !important;
   }
@@ -40,10 +40,9 @@ header.header {
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
   align-items: center;
-  flex-wrap: wrap;
   width: 100%;
 
-  @media (max-width: 530px) {
+  @media (max-width: $breakpoint-sm) {
     grid-template-columns: 1fr;
     gap: 8px;
   }

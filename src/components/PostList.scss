@@ -22,20 +22,19 @@
     }
 
     .post__content {
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: 1fr 1fr .5fr;
       align-items: center;
       flex-grow: 1;
       width: 100%;
       padding: 16px 30px;
-      flex-wrap: wrap;
       gap: 8px;
 
       @media (max-width: $breakpoint-xs) {
+        grid-template-columns: 1fr;
         padding: 8px 14px;
         gap: 4px;
-        flex-flow: column;
-        align-items: flex-end;
+        justify-items: end;
       }
 
       p {
@@ -104,16 +103,14 @@
       }
 
       .post__content {
+        grid-template-columns: 1fr 1fr;
         align-items: start;
-        justify-content: space-between;
         padding: 12px;
 
         @media (max-width: $breakpoint-xs) {
           padding: 8px;
           gap: 4px;
-          flex-flow: row;
-          justify-content: space-evenly;
-          flex-wrap: wrap;
+          justify-items: normal;
         }
 
         .post__analytics {
@@ -125,9 +122,8 @@
         }
 
         .post__uploaded {
-          align-self: flex-end;
-          justify-self: flex-end;
-          width: 100%;
+          grid-column: 1 / -1;
+          align-self: end;
           margin-top: 25px;
           display: flex;
           flex-direction: row;
@@ -141,7 +137,6 @@
           @media (max-width: $breakpoint-xs) {
             padding: 8px;
             gap: 4px;
-            flex-flow: row;
             justify-content: flex-end;
           }
         }

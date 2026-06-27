@@ -28,7 +28,14 @@ function App() {
               pb: '61px'
             }}
           >
-            <Button>Load More</Button>
+            <Button
+              variant="outlined"
+              sx={{
+                borderRadius: '1000px'
+              }}
+            >
+              Load More
+            </Button>
           </Box>
         </main>
       </div>

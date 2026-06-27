@@ -60,7 +60,8 @@ function Header() {
               variant="outlined" 
               sx={{
                 color: "#3D8EDA",
-                borderColor: "#3D8EDA"
+                borderColor: "#3D8EDA",
+                borderRadius: '2px'
               }}
             />
           </Box>
@@ -72,7 +73,7 @@ function Header() {
               <b>870</b> posts
             </Typography>
             <Typography>
-              <b>11787</b> followers
+              <b>11,787</b> followers
             </Typography>
             <Typography>
               <b>112</b> following
@@ -85,16 +86,24 @@ function Header() {
               label="From"
               slotProps={{
                 textField: {
-                  size: 'small'
-                }
+                  size: 'small',
+                  sx: {
+                    bgcolor: '#fff',
+                    borderRadius: 1
+                  }
+                },
               }}
             />
             <DatePicker 
               label="To"
               slotProps={{
                 textField: {
-                  size: 'small'
-                }
+                  size: 'small',
+                  sx: {
+                    bgcolor: '#fff',
+                    borderRadius: 1
+                  }
+                },
               }}
             />
           </Box>
